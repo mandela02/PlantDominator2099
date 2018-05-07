@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             this, drawer, toolbar, R.string.navigation_drawer_open,
             R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
-        //state = getIntent().getBooleanExtra("state_1", true);
+        startService(svc);
         if(isMyServiceRunning(BackgroundSoundService.class)) state = true;
         else state = false;
         toggle.syncState();

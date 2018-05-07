@@ -63,6 +63,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
+import map.wayne.com.plantdominator2099.BackgroundSoundService;
 import map.wayne.com.plantdominator2099.R;
 import map.wayne.com.plantdominator2099.data.database.TreeDataSource;
 import map.wayne.com.plantdominator2099.data.model.TreeData;
@@ -116,6 +117,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
     private Button mButtonIrrigation;
     private FusedLocationProviderClient mFusedLocationClient;
 
+    private Intent svc;
+
+
     public MapFragment() {
     }
 
@@ -148,6 +152,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
         initView();
+        svc = new Intent(getContext(), BackgroundSoundService.class);
         TTS = new TextToSpeech(getContext(), this);
         //updateLocation();
         return v;

@@ -92,7 +92,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_margin="5dp"
-                        android:src="@drawable/ic_cancel"/>
+                        android:src="@drawable/watering_can"/>
 
                     <ProgressBar
                         android:id="@+id/progressRed"
@@ -146,7 +146,7 @@
                 android:layout_margin="5dp"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/batman"
+                android:src="@drawable/search_location"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"/>
 
@@ -159,7 +159,7 @@
                 android:layout_margin="5dp"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/batman"
+                android:src="@drawable/water_tree"
                 />
 
             <ImageView
@@ -188,7 +188,7 @@
                 android:layout_margin="5dp"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/batman"/>
+                android:src="@drawable/watering_can"/>
 
             <ProgressBar
                 android:id="@+id/progressBlue"
