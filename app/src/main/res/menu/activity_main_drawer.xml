@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="HUST map"/>
+        <item
+            android:id="@+id/nav_build"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Build your own route"/>
+        <item
+            android:id="@+id/nav_histoty"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Your history"/>
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_speaker"
+                android:title="Music ON"/>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Exit"/>
+        </menu>
+    </item>
+
+</menu>

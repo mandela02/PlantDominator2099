@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/image_avatar"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_200"
+        android:layout_margin="@dimen/dp_5"
+        android:padding="@dimen/dp_5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/batman"
+        />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_6"
+        android:layout_toRightOf="@id/image_avatar"
+        android:padding="@dimen/dp_5"
+        android:text="Name: Bruce Wayne"
+        android:textSize="@dimen/dp_20"/>
+
+    <TextView
+        android:id="@+id/text_id"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_name"
+        android:layout_margin="@dimen/dp_5"
+        android:layout_toRightOf="@id/image_avatar"
+        android:padding="@dimen/dp_5"
+        android:text="Secret ID: Batman"
+        android:textSize="@dimen/dp_20"
+        />
+
+    <TextView
+        android:id="@+id/text_location"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_id"
+        android:layout_margin="@dimen/dp_5"
+        android:layout_toRightOf="@id/image_avatar"
+        android:padding="@dimen/dp_5"
+        android:text="Main Location: Gotham"
+        android:textSize="@dimen/dp_20"
+        />
+
+    <ImageView
+        android:id="@+id/image_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_avatar"
+        android:layout_margin="@dimen/dp_5"
+        android:padding="@dimen/dp_5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/stats"
+        android:textSize="@dimen/dp_20"
+        />
+</RelativeLayout>

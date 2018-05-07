@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.fragments.HistoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.HistoryActivity">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#47BDED"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="History"
+            android:textColor="#000000"/>
+
+
+        <TableLayout
+            android:id="@+id/table_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv1"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:shrinkColumns="4">
+
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/tv11"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="9"
+                    android:background="#FFB500"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Day"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv12"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="2"
+                    android:background="#FFFA99"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Begin"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv13"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="2"
+                    android:background="#FFC03E"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Finish"
+                    android:textColor="#000000"/>
+
+                <Button
+                    android:id="@+id/tv14"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="Map"
+                    android:textColor="#000000"
+                    android:visibility="invisible"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/tv21"
+                    android:layout_height="@dimen/dp_75"
+
+                    android:layout_span="1"
+                    android:layout_weight="9"
+                    android:background="#FFB500"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="18/6/XXXX"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv22"
+                    android:layout_height="@dimen/dp_75"
+
+                    android:layout_weight="2"
+                    android:background="#FFFA99"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="1:00"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv23"
+                    android:layout_height="@dimen/dp_75"
+
+                    android:layout_weight="2"
+                    android:background="#FFC03E"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="2:00"
+                    android:textColor="#000000"/>
+
+                <Button
+                    android:id="@+id/tv24"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Map"
+                    android:textColor="#000000"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/tv31"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_span="1"
+                    android:layout_weight="9"
+                    android:background="#FFB500"
+                    android:gravity="center"
+                    android:text="17/6/xxxx"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv32"
+                    android:layout_height="@dimen/dp_75"
+
+                    android:layout_weight="2"
+                    android:background="#FFFA99"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="3:00"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv33"
+                    android:layout_height="@dimen/dp_75"
+
+                    android:layout_weight="2"
+                    android:background="#FFC03E"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="4:00"
+                    android:textColor="#000000"/>
+
+                <Button
+                    android:id="@+id/tv34"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Map"
+                    android:textColor="#000000"
+                    />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</FrameLayout>

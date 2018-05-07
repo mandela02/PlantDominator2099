@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activities.TreeInformationActivity"
+    tools:showIn="@layout/activity_tree_information">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:paddingBottom="@dimen/dp_12"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_description"
+            android:layout_margin="@dimen/text_margin"
+            android:paddingBottom="@dimen/dp_12"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dp_20"/>
+
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_status"
+            android:background="#47BDED"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="History"
+            android:textColor="#000000"/>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:layout_marginTop="10dp"
+            android:shrinkColumns="0">
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                >
+
+                <TextView
+                    android:id="@+id/tv21"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_span="1"
+                    android:layout_weight="1"
+                    android:background="#FFB500"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="Day"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv22"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:background="#FFFA99"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="Time"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv23"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="3"
+                    android:background="#FFC03E"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="User"
+                    android:textColor="#000000"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                >
+
+                <TextView
+                    android:id="@+id/tv31"
+                    android:layout_span="1"
+                    android:layout_weight="1"
+                    android:background="#FFB500"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="31/3/2022"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv32"
+                    android:layout_span="1"
+                    android:layout_weight="1"
+                    android:background="#FFFA99"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="12:12"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv33"
+                    android:layout_span="3"
+                    android:layout_weight="3"
+                    android:background="#FFC03E"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="Batman"
+                    android:textColor="#000000"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                >
+
+                <TextView
+                    android:id="@+id/tv41"
+                    android:layout_span="1"
+                    android:layout_weight="1"
+                    android:background="#FFB500"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="1/1/1900"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv42"
+                    android:layout_span="1"
+                    android:layout_weight="1"
+                    android:background="#FFFA99"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="23:22"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv43"
+                    android:layout_span="3"
+                    android:layout_weight="3"
+                    android:background="#FFC03E"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="Superman"
+                    android:textColor="#000000"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                >
+
+                <TextView
+                    android:id="@+id/tv51"
+                    android:layout_span="1"
+                    android:layout_weight="1"
+                    android:background="#FFB500"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="14/2/9999"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv52"
+                    android:layout_span="1"
+                    android:layout_weight="1"
+                    android:background="#FFFA99"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="1:59"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/tv53"
+                    android:layout_span="3"
+                    android:layout_weight="3"
+                    android:background="#FFC03E"
+                    android:gravity="center"
+                    android:padding="20dip"
+                    android:text="T_START"
+                    android:textColor="#000000"/>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
