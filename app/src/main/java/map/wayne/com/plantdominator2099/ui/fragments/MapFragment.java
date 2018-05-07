@@ -224,8 +224,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.setOnMarkerClickListener(this);
         googleMap.setMyLocationEnabled(true);
-            mMyLocation = getLastKnownLocation();
-            getMarkerPoint();
+        mMyLocation = getLastKnownLocation();
+        getMarkerPoint();
         googleMap.setOnMapClickListener(this);
     }
 
@@ -715,6 +715,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                         // start your activity here
                         mRelativeWater.setVisibility(View.GONE);
                         mImageApprove.setVisibility(View.VISIBLE);
+                        for (i = mTreeData.size() - 1; i >= 0; i--) {
+                            if (mTreeData.get(i).getTreeName()
+                                .equals(mResult.getTreeName()))
+                                mDatabase.UpdateById(mTreeData.get(i).getId(), 1);
+                        }
                         if (isStarted) {
                             if (mTreeData.size() - 1 != 0) {
                                 mMap.clear();
@@ -761,6 +766,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                                 TTS.speak("Congratulation, you finish your quest",
                                     TextToSpeech.QUEUE_FLUSH, null);
                             }
+                        }
+                        else {
+                            mMap.clear();
+                            setDb();
+                            setupMap();
+                            setWaterSpot();
                         }
                     }
                 });

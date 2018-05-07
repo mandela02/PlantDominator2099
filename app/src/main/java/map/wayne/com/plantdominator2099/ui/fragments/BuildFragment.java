@@ -607,7 +607,6 @@ public class BuildFragment extends Fragment implements OnMapReadyCallback,
                                 mBtnDefaultRoute.setVisibility(View.VISIBLE);
                                 mBtnStopDefaultRoute.setVisibility(View.GONE);
                                 TTS.stop();
-
                             }
                         })
                     .setNegativeButton(android.R.string.no,
@@ -623,7 +622,6 @@ public class BuildFragment extends Fragment implements OnMapReadyCallback,
                         (mTreeData.size()) + " trees left. Are you sure to cancel " +
                         "misson?",
                     TextToSpeech.QUEUE_FLUSH, null);
-
                 break;
             case R.id.btn_setDefaultRoute:
                 AlertDialog.Builder builder_1 =
@@ -659,14 +657,12 @@ public class BuildFragment extends Fragment implements OnMapReadyCallback,
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 TTS.stop();
-
                             }
                         })
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
                 TTS.speak("do you want to begin with your chosen trees?",
                     TextToSpeech.QUEUE_FLUSH, null);
-
                 break;
             case R.id.btn_irrigation:
                 final int progress = mProgressBlue.getProgress();
@@ -701,6 +697,11 @@ public class BuildFragment extends Fragment implements OnMapReadyCallback,
                         // start your activity here
                         mRelativeWater.setVisibility(View.GONE);
                         mImageApprove.setVisibility(View.VISIBLE);
+                        for (i = mTreeData.size() - 1; i >= 0; i--) {
+                            if (mTreeData.get(i).getTreeName()
+                                .equals(mResult.getTreeName()))
+                                mDatabase.UpdateById(mTreeData.get(i).getId(), 1);
+                        }
                         if (isStarted) {
                             if (mTreeData.size() - 1 != 0) {
                                 mMap.clear();
@@ -745,8 +746,12 @@ public class BuildFragment extends Fragment implements OnMapReadyCallback,
                                     .show();
                                 TTS.speak("Congratulation, you finish your quest",
                                     TextToSpeech.QUEUE_FLUSH, null);
-
                             }
+                        } else {
+                            mMap.clear();
+                            setDb();
+                            setupMap();
+                            setWaterSpot();
                         }
                     }
                 });

@@ -95,4 +95,19 @@ public class TreeDataSource extends DatabaseHelper {
             database.close();
         }
     }
+
+    public void UpdateById(int id, int status) {
+        SQLiteDatabase database = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(TreeDatabase.TreeEntry.COLUMN_STATUS, status);
+        try {
+            String whereClause = TreeDatabase.TreeEntry.COLUMN_ID + " =?";
+            String[] whereArgs = {String.valueOf(id)};
+            database.update(TreeDatabase.TreeEntry.TABLE_NAME, values, whereClause, whereArgs);
+        } catch (Exception e) {
+        } finally {
+            database.close();
+        }
+    }
+
 }
