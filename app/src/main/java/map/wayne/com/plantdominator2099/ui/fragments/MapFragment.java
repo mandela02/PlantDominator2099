@@ -62,6 +62,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import map.wayne.com.plantdominator2099.BackgroundSoundService;
 import map.wayne.com.plantdominator2099.R;
@@ -116,9 +119,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
     private ProgressBar mProgressBlue;
     private Button mButtonIrrigation;
     private FusedLocationProviderClient mFusedLocationClient;
-
     private Intent svc;
-
 
     public MapFragment() {
     }
@@ -129,6 +130,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
         }
+
 /*
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(getActivity());
         mFusedLocationClient.getLastLocation().addOnSuccessListener(getActivity(),
@@ -140,6 +142,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                     }
                 }
             });
+
 */
     }
 
@@ -158,10 +161,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         return v;
     }
 
-/*
-    private void updateLocation()
-    {
-        ScheduledExecutorService scheduleTaskExecutor= Executors.newScheduledThreadPool(5);
+    private void updateLocation() {
+        ScheduledExecutorService scheduleTaskExecutor = Executors.newScheduledThreadPool(5);
         scheduleTaskExecutor.scheduleAtFixedRate(new Runnable() {
             public void run() {
                 //add your code you would like to be executed every 10 seconds.
@@ -172,9 +173,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                 //add your code you would like to be executed every 10 seconds.
             }
         }, 0, 10, TimeUnit.SECONDS);
-
     }
-*/
 
     public void initView() {
         mTree = new ArrayList<>();
@@ -217,6 +216,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         LatLng bachkhoa = new LatLng(21.004911, 105.844158);
         setDb();
+        setWaterSpot();
         setupMap();
         googleMap.setOnMarkerClickListener(this);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(bachkhoa));
@@ -224,13 +224,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.setOnMarkerClickListener(this);
         googleMap.setMyLocationEnabled(true);
-        mMyLocation = getLastKnownLocation();
-        //getLastLocationNewMethod();
+            mMyLocation = getLastKnownLocation();
+            getMarkerPoint();
         googleMap.setOnMapClickListener(this);
-        setWaterSpot();
-        getMarkerPoint();
     }
-    // TODO: Rename method, update argument and hook method into UI event
 
     public void addTree() {
         mTree.add(new TreeData(1, "Tree_1", 21.004517, 105.843447, 1, 1, "Bamboo"));
@@ -684,7 +681,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                         "the" +
                         " menu",
                     TextToSpeech.QUEUE_FLUSH, null);
-
                 break;
             case R.id.btn_irrigation:
                 final int progress = mProgressBlue.getProgress();

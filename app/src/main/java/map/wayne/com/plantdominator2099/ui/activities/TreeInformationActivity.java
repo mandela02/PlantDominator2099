@@ -26,6 +26,7 @@ public class TreeInformationActivity extends AppCompatActivity {
     private TextView mTextStatus;
     private ImageView mImageAva;
     private TreeData mTreeData;
+    private ImageView mBtnEdit;
 
 
     @Override
@@ -65,6 +66,14 @@ public class TreeInformationActivity extends AppCompatActivity {
         mTextDes = (TextView) findViewById(R.id.text_description);
         mTextStatus = (TextView) findViewById(R.id.text_status);
         mImageAva = (ImageView) findViewById(R.id.image_tree);
+        mBtnEdit = findViewById(R.id.btn_edit_infomation);
+        mBtnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TreeInformationActivity.this, EditTreeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void setView() {

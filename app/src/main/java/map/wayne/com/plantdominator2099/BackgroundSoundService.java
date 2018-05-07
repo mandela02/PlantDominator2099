@@ -48,7 +48,6 @@ public class BackgroundSoundService extends Service {
 
     public int onStartCommand(Intent intent, int flags, int startId) {
         player.start();
-        player.seekTo(length);
         return 1;
     }
 

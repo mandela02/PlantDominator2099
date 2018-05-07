@@ -6,15 +6,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_map"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_map_location"
             android:title="HUST map"/>
         <item
             android:id="@+id/nav_build"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_map"
             android:title="Build your own route"/>
         <item
             android:id="@+id/nav_histoty"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_history"
             android:title="Your history"/>
     </group>
 
@@ -26,7 +26,7 @@
                 android:title="Music ON"/>
             <item
                 android:id="@+id/nav_exit"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_exit"
                 android:title="Exit"/>
         </menu>
     </item>
