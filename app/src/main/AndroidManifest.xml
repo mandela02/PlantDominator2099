@@ -32,12 +32,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.activities.IntroActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-
         </activity>
         <activity
             android:name=".ui.activities.LoginActivity"
@@ -48,6 +42,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <service
             android:name=".BackgroundSoundService"
             android:enabled="true"/>
@@ -76,6 +71,15 @@
             android:label="@string/title_activity_sample_map">
         </activity>
         <activity android:name=".ui.activities.ProfileActivity">
+        </activity>
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
     </application>
 

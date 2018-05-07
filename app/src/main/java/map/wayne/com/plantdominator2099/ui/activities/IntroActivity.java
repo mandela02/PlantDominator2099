@@ -18,8 +18,37 @@ public class IntroActivity extends AppIntro {
         super.onCreate(savedInstanceState);
         addSlide(IntroSlide.newInstance(R.layout.slide_1));
         addSlide(IntroSlide.newInstance(R.layout.slide_2));
-        addSlide(AppIntroFragment.newInstance("slide Title", "batman batman", R.drawable
-            .batman, getColor(R.color.colorPrimary)));
+        addSlide(IntroSlide.newInstance(R.layout.slide_3));
+        addSlide(IntroSlide.newInstance(R.layout.slide_4));
+        addSlide(IntroSlide.newInstance(R.layout.slide_5));
+        addSlide(IntroSlide.newInstance(R.layout.slide_6));
+        addSlide(IntroSlide.newInstance(R.layout.slide_7));
+        addSlide(IntroSlide.newInstance(R.layout.slide_8));
+        getSupportActionBar().setTitle("Tutorial 101");
+
+/*
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_1,
+            getColor(R.color.colorPrimary)));
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_2,
+            getColor(R.color.colorPrimary)));
+
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_333,
+            getColor(R.color.colorPrimary)));
+
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_4,
+            getColor(R.color.colorPrimary)));
+
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_5,
+            getColor(R.color.colorPrimary)));
+
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_6,
+            getColor(R.color.colorPrimary)));
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_7,
+            getColor(R.color.colorPrimary)));
+        addSlide(AppIntroFragment.newInstance("Plant Dominator 101", "", R.drawable.tut_8,
+            getColor(R.color.colorPrimary)));
+*/
+
     }
 
     @Override

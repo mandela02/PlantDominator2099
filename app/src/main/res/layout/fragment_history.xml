@@ -27,7 +27,7 @@
         <TableLayout
             android:id="@+id/table_history"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/tv1"
             android:layout_marginBottom="@dimen/dp_5"
             android:layout_marginTop="@dimen/dp_5"
@@ -174,5 +174,12 @@
                     />
             </TableRow>
         </TableLayout>
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/table_history"
+            android:padding="@dimen/dp_12"
+            android:layout_margin="@dimen/dp_12"/>
     </RelativeLayout>
 </FrameLayout>

@@ -26,6 +26,10 @@ repositories {
     jcenter()
 }
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -39,6 +43,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "com.google.android.gms:play-services-location:15.0.1"
-    implementation group: 'org.achartengine', name: 'achartengine', version: '1.2.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
     implementation 'com.github.apl-devs:appintro:v4.2.3'
 }
